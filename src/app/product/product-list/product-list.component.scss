@@ -1,0 +1,38 @@
+.card {
+    margin-top: 10px;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    padding: 16px;
+}
+
+.card-header {
+    background-color: #ccc;
+    padding: 16px;
+    font-size: larger;
+}
+
+.filter-container {
+    display: flex;
+    margin-top: 15px;
+}
+
+.filter-label {
+    margin-right: 70px;
+}
+
+.filter-input {
+    width: 12%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filtered-label {
+    font-size: larger;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
