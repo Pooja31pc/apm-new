@@ -11,12 +11,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
+import { StarComponent } from './shared/star/star.component';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    ConvertToSpacesPipe
+    ConvertToSpacesPipe,
+    StarComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
     MatTable,
     MatTableModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync()

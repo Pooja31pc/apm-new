@@ -8,6 +8,10 @@ import { IProduct } from '../product';
 })
 export class ProductListComponent implements OnInit {
 
+  constructor() {}
+
+  pageTitle: string = 'Product List';
+
   ngOnInit(): void {
     this.listFilter = 'garden';
   }
@@ -29,8 +33,6 @@ export class ProductListComponent implements OnInit {
   
   filteredProducts: IProduct[] = [];
 
-  // message : string = '';
-
   products : IProduct[] = [
     {
       imageUrl: "assets/images/garden_cart.jpg",
@@ -46,7 +48,7 @@ export class ProductListComponent implements OnInit {
       productCode: "HAM-0024",
       releaseDate: "February 20, 2024",
       price: 89.50,
-      starRating: 4.0,
+      starRating: 3.0,
     },
     {
       imageUrl: "assets/images/flower_pot.jpg",
@@ -54,7 +56,7 @@ export class ProductListComponent implements OnInit {
       productCode: "FLO-0025",
       releaseDate: "March 13, 2024",
       price: 45.00,
-      starRating: 4.5,
+      starRating: 2.0,
     },
     {
       imageUrl: "assets/images/vermicompost.jpg",
@@ -77,51 +79,9 @@ export class ProductListComponent implements OnInit {
     );
   }
 
-  // onRatingClickrd(message: string): void {
-  //   this.message = message;
-  // }
+  onRatingClicked(message: string) : void {
+    this.pageTitle = 'Product List: ' + message;
+  }
+
 }
 
-
-// products : any[] = [
-//   {
-//     productId: 2,
-//     productName: "Garden Cart",
-//     productCode: "GDN-0023",
-//     releaseDate: "January 23, 2024",
-//     description: "This is a dummy product 1",
-//     price: 120.99,
-//     starRating: 4.5,
-//     imageUrl: "assets/images/"
-//   },
-//   {
-//     productId: 3,
-//     productName: "Hammer",
-//     productCode: "HAM-0024",
-//     releaseDate: "February 20, 2024",
-//     description: "This is a dummy product 2",
-//     price: 89.50,
-//     starRating: 4.0,
-//     imageUrl: "assets/images/"
-//   },
-//   {
-//     productId: 4,
-//     productName: "Flower Pot",
-//     productCode: "FLO-0025",
-//     releaseDate: "March 13, 2024",
-//     description: "This is a dummy product 3",
-//     price: 45.00,
-//     starRating: 4.5,
-//     imageUrl: "assets/images/"
-//   },
-//   {
-//     productId: 5,
-//     productName: "Vermicompost",
-//     productCode: "VER-0025",
-//     releaseDate: "March 23, 2024",
-//     description: "This is a dummy product 4",
-//     price: 100.00,
-//     starRating: 4.2,
-//     imageUrl: "assets/images/"
-//   }
-// ]
